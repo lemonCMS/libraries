@@ -1,4 +1,4 @@
-import {Article, Home, InsertDriveFile, Lock, Person} from '@mui/icons-material';
+import {Article, Home, Lock, Person} from '@mui/icons-material';
 
 const menuItems = [
   {

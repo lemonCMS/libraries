@@ -1,4 +1,4 @@
-import {ClientSide} from "../components/Cats/ClientSide";
+import {ClientSide} from "../components/cats/client-side";
 
 export function Index() {
   /*

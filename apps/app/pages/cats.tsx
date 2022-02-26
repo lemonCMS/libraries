@@ -1,9 +1,9 @@
 import {Box, Button} from "@mui/material";
-import {ServerSide} from "../components/Cats/ServerSide";
-import {ClientSide} from "../components/Cats/ClientSide";
+import {ServerSide} from "../components/cats/server-side";
+import {ClientSide} from "../components/cats/client-side";
 import {CustomPageContext} from "./_app";
 import {lastValueFrom} from "rxjs";
-import useRefresh from "../hooks/useRefresh";
+import useRefresh from "../hooks/use-refresh";
 import {useEffect} from "react";
 import Services from "../services";
 import Item from "../components/item";

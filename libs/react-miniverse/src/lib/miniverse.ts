@@ -50,7 +50,6 @@ export class Miniverse {
    * This should be used when running server side
    */
   public close() {
-    console.log('CLOSE');
     Array.from(this.hot.values()).forEach((obs: BehaviorSubject<any>) => {
       obs.complete();
     })
@@ -69,7 +68,6 @@ export class Miniverse {
    * @param key
    */
   public clear(namespace: string, key: string): void {
-    console.log('CLEAR');
     const nsKey = this.getKey(namespace, key);
     const obs = this.hot.get(nsKey);
     if (obs) {
@@ -142,10 +140,10 @@ export class Miniverse {
     }
 
     if (refresh) {
-       this.load(namespace, key, resource).subscribe();
+      this.load(namespace, key, resource).subscribe();
     }
 
-    if(options?.complete) {
+    if (options?.complete) {
       return new Observable((subscriber => {
         subscriber.next(subject.value)
         subscriber.complete();

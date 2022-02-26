@@ -1,5 +1,5 @@
 import {CustomPageContext} from "./_app";
-import {firstValueFrom, lastValueFrom, skip} from "rxjs";
+import {lastValueFrom} from "rxjs";
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
 
 export default function Test2({pageProps: {user}}: any) {

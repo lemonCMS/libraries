@@ -1,5 +1,5 @@
 import {CustomPageContext} from "./_app";
-import {lastValueFrom, tap} from "rxjs";
+import {lastValueFrom} from "rxjs";
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
 import Link from 'next/link'
 import {useRouter} from "next/router";
@@ -32,7 +32,11 @@ export default function Test({pageProps: {user}}: any) {
         </CardContent>
       </CardActionArea>
 
-      <Link href={`/test?id=${parseInt((query?.id as string) || '1') + 1}`}><Refresh /></Link>
+      <Link href={`/test?id=${parseInt((query?.id as string) || '1') + 1}`} passHref>
+        <a title={'Refresh random user'}>
+          <Refresh />
+        </a>
+      </Link>
     </Card>
   );
 }
